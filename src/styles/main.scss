@@ -1,96 +1,52 @@
-body {
-  margin: 5px;
-  background:
-    linear-gradient(rgba(200, 0, 100, 0.5), rgba(0, 0, 100, 0.5)),
-    url(../assets/bj.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  padding: 5px;
-  color: white;
-}
+// body {
+//   margin: 5px;
+//   background:
+//     linear-gradient(rgba(200, 0, 100, 0.5), rgba(0, 0, 100, 0.5)),
+//     url(../assets/bj.jpeg);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-attachment: fixed;
+//   background-size: cover;
+//   padding: 5px;
+//   color: white;
+// }
 
-.headl {
-  text-align: center;
-  margin: auto;
-  margin: 10px auto 0 auto;
-}
-
-.leaderboard {
+header {
   display: flex;
   justify-content: center;
-  gap: 90px;
-}
-
-.scoresContainer {
-  display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
+  background-color: blue;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
-table {
-  border: 1px solid rgba(200, 0, 100, 0.5);
-  font-style: italic;
-  width: 100%;
-  border-collapse: collapse;
+.cardImg img {
+  width: 300px;
+  height: 300px;
 }
 
-table tr {
-  width: 100%;
+.cardsContainer {
+  width: 90%;
+  margin: 85px auto;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-table tr:nth-child(odd) {
-  background-color: rgba(200, 0, 100, 0.5);
-  color: white;
-}
-
-table tr td {
-  width: 1%;
-  height: 30px;
-  padding: 0 10px;
-}
-
-input {
-  height: 30px;
-  font-style: italic;
-}
-
-.refreshBtn {
-  height: 30px;
-  border: none;
-  background-color: #3600e9;
-  color: white;
-}
-
-.formBtn {
-  width: 30%;
-  margin-left: auto;
-  height: 30px;
-  border: none;
-  background-color: #3600e9;
-  color: white;
-}
-
-form {
+.cards {
+  flex-wrap: wrap;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
 }
 
-@media (max-width: 700px) {
-  .leaderboard {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    margin: auto;
-    gap: 10px;
-  }
-
-  table {
-    border: none;
-    font-style: italic;
-    width: 100%;
-    border-collapse: collapse;
-  }
+.commentsBtn {
+  width: 100px;
+  height: 35px;
+  border-radius: 8px;
+  margin: 20px 0;
 }
