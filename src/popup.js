@@ -1,6 +1,7 @@
 import './styles/main.scss';
 import Furios from './assets/ff.jpg';
 import Close from './assets/close.png';
+import './index.js';
 
 const furios = new Image();
 furios.src = Furios;
@@ -14,7 +15,7 @@ popBtn.classList.add('pop');
 popBtn.setAttribute('type', 'button');
 popBtn.innerText = 'Comments';
 document.body.appendChild(popBtn);
-
+// const pop = document.querySelector('.pop');
 //-----Pop-up-------
 
 const comments = document.getElementById('comments');

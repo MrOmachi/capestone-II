@@ -28,7 +28,7 @@ class UI {
     <div class="cardStar"><span>⭐</span><span>${x.id}</span></div>
     <div class="cardTitle">${x.name}</div>
     <div class="comments">
-    <button class='commentsBtn' type="button">Comments</button>
+    <button class='pop' type="button">Comments</button>
     </div>
     `;
       cardsContainer.appendChild(div);
