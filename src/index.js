@@ -1,37 +1,51 @@
 import './styles/main.scss';
+import showPop from './popup.js';
 
 class UI {
   static getMovies = async () => {
     const res = await fetch('https://api.tvmaze.com/shows');
     const data = await res.json();
 
-    const likeres = await fetch(
-      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/likes'
-    );
-    const likedata = await likeres.json();
-    console.log(likedata);
-
     data.forEach((x) => {
       const cardsContainer = document.querySelector('.cardsContainer');
       let div = document.createElement('div');
       div.className = 'cards';
-      const header = document.querySelector('header');
 
-      header.innerHTML = `
-      <h1>Movies</h1>
-      <h3>Number of movies: <span class="moviesNumber"></span>${x.id}</h3>
-      `;
-      div.innerHTML = `
-    <div class="cardImg">
-      <img src=${x.image.medium} alt="" />
-    </div>
-    <div class="cardStar"><span>⭐</span><span>${x.id}</span></div>
-    <div class="cardTitle">${x.name}</div>
-    <div class="comments">
-    <button class='pop' type="button">Comments</button>
-    </div>
-    `;
+      const imgDiv = document.createElement('div');
+      imgDiv.classList.add('cardImg');
+      const cardImg = document.createElement('img');
+      cardImg.src = `${x.image.medium}`;
+      imgDiv.appendChild(cardImg);
+
+      const rateDiv = document.createElement('div');
+      rateDiv.classList.add('cardStar');
+      const starSpan = document.createElement('span');
+      starSpan.textContent = '⭐';
+      const rateSpan = document.createElement('span');
+      rateSpan.textContent = `${x.id}`;
+      rateDiv.appendChild(starSpan);
+      rateDiv.appendChild(rateSpan);
+
+      const titleDiv = document.createElement('div');
+      titleDiv.classList.add('cardTitle');
+      titleDiv.textContent = `${x.name}`;
+
+      const commentsDiv = document.createElement('div');
+      commentsDiv.classList.add('comments');
+      const commentsBtn = document.createElement('button');
+      commentsBtn.textContent = 'Comments';
+      commentsDiv.appendChild(commentsBtn);
+
+      div.appendChild(imgDiv);
+      div.appendChild(rateDiv);
+      div.appendChild(titleDiv);
+      div.appendChild(commentsDiv);
       cardsContainer.appendChild(div);
+
+      commentsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showPop();
+      });
     });
   };
 }
@@ -89,7 +103,6 @@ class Likes {
       'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/comments'
     );
     const comment = await res.json();
-    console.log(comment);
   };
 }
 Likes.postComments(2, 'john', 'yea');
