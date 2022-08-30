@@ -1,5 +1,4 @@
 import './styles/main.scss';
-import img from './assets/bj.jpeg';
 
 class UI {
   static getMovies = async () => {
@@ -33,3 +32,62 @@ class UI {
 }
 
 UI.getMovies();
+
+// generate like
+const uniqueId = 'w6gyfRjKef7dpeJ8lwcd';
+class Likes {
+  static getLikes = async () => {
+    const res = await fetch(
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/likes'
+    );
+    const data = await res.json();
+    console.log(data);
+  };
+  static addLikes = async (id) => {
+    const response = await fetch(
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/likes',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          item_id: id,
+        }),
+      }
+    );
+    const post = await response.text();
+    return post;
+  };
+
+  static postComments = async (id, name, comment) => {
+    const res = await fetch(
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/comments',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          item_id: id,
+          username: name,
+          comment: comment,
+        }),
+      }
+    );
+    const post = await res.text();
+    console.log(post);
+  };
+
+  static getComments = async (id) => {
+    const res = await fetch(
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/comments'
+    );
+    const comment = await res.json();
+    console.log(comment);
+  };
+}
+Likes.postComments(2, 'john', 'yea');
+// Likes.getComments(2);
+Likes.addLikes(17);
+Likes.getLikes();
