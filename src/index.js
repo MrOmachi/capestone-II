@@ -5,6 +5,12 @@ class UI {
     const res = await fetch('https://api.tvmaze.com/shows');
     const data = await res.json();
 
+    const likeres = await fetch(
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/likes'
+    );
+    const likedata = await likeres.json();
+    console.log(likedata);
+
     data.forEach((x) => {
       const cardsContainer = document.querySelector('.cardsContainer');
       let div = document.createElement('div');
@@ -15,7 +21,6 @@ class UI {
       <h1>Movies</h1>
       <h3>Number of movies: <span class="moviesNumber"></span>${x.id}</h3>
       `;
-
       div.innerHTML = `
     <div class="cardImg">
       <img src=${x.image.medium} alt="" />
@@ -41,7 +46,7 @@ class Likes {
       'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/likes'
     );
     const data = await res.json();
-    console.log(data);
+    return data;
   };
   static addLikes = async (id) => {
     const response = await fetch(
@@ -79,7 +84,7 @@ class Likes {
     console.log(post);
   };
 
-  static getComments = async (id) => {
+  static getComments = async () => {
     const res = await fetch(
       'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/comments'
     );
@@ -88,6 +93,6 @@ class Likes {
   };
 }
 Likes.postComments(2, 'john', 'yea');
-// Likes.getComments(2);
+Likes.getComments();
 Likes.addLikes(17);
 Likes.getLikes();
