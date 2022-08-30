@@ -96,3 +96,5 @@ Likes.postComments(2, 'john', 'yea');
 Likes.getComments();
 Likes.addLikes(17);
 Likes.getLikes();
+
+import './popup.js';
