@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n}\n\nhtml {\n  color: #555;\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 18px;\n  font-weight: 400;\n}\n\nbody {\n  background-color: #fcfcfc;\n}\n\n#comments {\n  display: flex;\n  background-color: rgb(197, 197, 197);\n  position: absolute;\n  width: 400px;\n  height: 400px;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  text-align: center;\n  padding: 0 30px 30px;\n  color: #333;\n  flex-direction: column;\n  visibility: visible;\n}\n\n#comments img {\n  width: 100px;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACI,SAAA;EACA,UAAA;AACJ;;AAEE;EACE,WAAA;EACA,yCAAA;EACA,eAAA;EACA,gBAAA;AACJ;;AAEE;EACE,yBAAA;AACJ;;AAEE;EACE,aAAA;EACA,oCAAA;EACA,kBAAA;EACA,YAAA;EACA,aAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,kBAAA;EACA,oBAAA;EACA,WAAA;EACA,sBAAA;EACA,mBAAA;AACJ;;AACE;EACE,YAAA;AAEJ","sourcesContent":["* {\r\n    margin: 0;\r\n    padding: 0;\r\n  }\r\n  \r\n  html {\r\n    color: #555;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 18px;\r\n    font-weight: 400;\r\n  }\r\n  \r\n  body {\r\n    background-color: #fcfcfc;\r\n  }  \r\n  \r\n  #comments{\r\n    display: flex;\r\n    background-color:rgb(197, 197, 197);\r\n    position: absolute;\r\n    width: 400px;\r\n    height: 400px;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%,-50%);\r\n    text-align: center;\r\n    padding: 0 30px 30px;\r\n    color: #333;\r\n    flex-direction: column;\r\n    visibility:visible;\r\n  }\r\n  #comments img {\r\n    width: 100px;\r\n  }\r\n\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n}\n\nhtml {\n  color: #555;\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 18px;\n  font-weight: 400;\n}\n\nbody {\n  background-color: #fcfcfc;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#comments {\n  display: flex;\n  align-items: center;\n  background-color: rgb(197, 197, 197);\n  position: absolute;\n  width: 400px;\n  height: 700px;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  text-align: center;\n  padding: 0 30px 30px;\n  color: #333;\n  flex-direction: column;\n  visibility: visible;\n  justify-content: space-between;\n}\n\n.fast {\n  width: 200px;\n}\n\n.closeBtn {\n  width: 20px;\n  align-self: flex-end;\n}\n\n.cm {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  height: 200px;\n  justify-content: space-around;\n}\n\nfooter {\n  margin-top: auto;\n}\n\n.insights {\n  height: 50%;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACI,SAAA;EACA,UAAA;AACJ;;AAEE;EACE,WAAA;EACA,yCAAA;EACA,eAAA;EACA,gBAAA;AACJ;;AAEE;EACE,yBAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AACJ;;AAGE;EACE,aAAA;EACA,mBAAA;EACA,oCAAA;EACA,kBAAA;EACA,YAAA;EACA,aAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,kBAAA;EACA,oBAAA;EACA,WAAA;EACA,sBAAA;EACA,mBAAA;EACA,8BAAA;AAAJ;;AAEE;EACE,YAAA;AACJ;;AACE;EACE,WAAA;EACA,oBAAA;AAEJ;;AAAE;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,aAAA;EACA,6BAAA;AAGJ;;AADE;EACE,gBAAA;AAIJ;;AAFA;EACI,WAAA;AAKJ","sourcesContent":["* {\n    margin: 0;\n    padding: 0;\n  }\n  \n  html {\n    color: #555;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 18px;\n    font-weight: 400;\n  }\n  \n  body {\n    background-color: #fcfcfc;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    \n  }  \n  \n  #comments{\n    display: flex;\n    align-items: center;\n    background-color:rgb(197, 197, 197);\n    position: absolute;\n    width: 400px;\n    height: 700px;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    text-align: center;\n    padding: 0 30px 30px;\n    color: #333;\n    flex-direction: column;\n    visibility:visible;\n    justify-content: space-between;\n  }\n  .fast {\n    width: 200px;\n  }\n  .closeBtn {\n    width: 20px;\n    align-self: flex-end;\n  }\n  .cm {\n    display: flex;\n    flex-direction: column;\n    align-items:flex-start;\n    height: 200px;\n    justify-content: space-around;\n  }\n  footer{\n    margin-top: auto;\n}\n.insights {\n    height: 50%;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -530,13 +530,23 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/assets/ff2.png":
-/*!****************************!*\
-  !*** ./src/assets/ff2.png ***!
-  \****************************/
+/***/ "./src/assets/close.png":
+/*!******************************!*\
+  !*** ./src/assets/close.png ***!
+  \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "ff2.png";
+module.exports = __webpack_require__.p + "close.png";
+
+/***/ }),
+
+/***/ "./src/assets/ff.jpg":
+/*!***************************!*\
+  !*** ./src/assets/ff.jpg ***!
+  \***************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ff.jpg";
 
 /***/ })
 
@@ -653,12 +663,15 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _assets_ff2_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/ff2.png */ "./src/assets/ff2.png");
+/* harmony import */ var _assets_ff_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/ff.jpg */ "./src/assets/ff.jpg");
+/* harmony import */ var _assets_close_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/close.png */ "./src/assets/close.png");
 
- //import './assets/ff.jpg';
+
 
 var furios = new Image();
-furios.src = _assets_ff2_png__WEBPACK_IMPORTED_MODULE_1__; //-----Coments ------
+furios.src = _assets_ff_jpg__WEBPACK_IMPORTED_MODULE_1__;
+var close = new Image();
+close.src = _assets_close_png__WEBPACK_IMPORTED_MODULE_2__; //-----Coments------
 
 var popBtn = document.createElement('button');
 popBtn.classList.add('pop');
@@ -667,21 +680,29 @@ popBtn.innerText = 'Comments';
 document.body.appendChild(popBtn); //-----Pop-up-------
 
 var comments = document.getElementById('comments');
-var imagen = document.createElement('img');
-imagen.setAttribute('src', './assets/ff2.png');
+furios.classList.add('fast');
+close.classList.add('closeBtn');
 var titleMovie = document.createElement('h2');
 titleMovie.innerText = 'Name Movie';
 var infoApi = document.createElement('p');
-infoApi.innerText = 'Information about movie(API)';
-var oldComments = document.createElement('p');
-oldComments.innerText = 'comments(2)';
+infoApi.innerText = 'Information about movie(API_1)';
+var oldComments = document.createElement('h3');
+oldComments.innerText = 'comments(2)(API_2)';
+var commentOld1 = document.createElement('ul');
+var listComments = document.createElement('li');
+var listComments2 = document.createElement('li');
+commentOld1.appendChild(listComments);
+commentOld1.appendChild(listComments2);
+listComments.innerText = "03/11/2021 Alex: I'd love to buy it!";
+listComments2.innerText = "03/12/2021 Mia: I love!";
 var commentBoxes = document.createElement('form');
-commentBoxes.classList.add('Cm');
+commentBoxes.classList.add('cm');
 var addCommentTitle = document.createElement('h2');
 addCommentTitle.innerText = 'Add a comment';
 var nameUser = document.createElement('input');
 nameUser.setAttribute('placeholder', 'Your name');
 var textComment = document.createElement('input');
+textComment.classList.add('insights');
 textComment.setAttribute('placeholder', 'Your insights');
 var sendBtn = document.createElement('button');
 sendBtn.innerText = 'Send Comment';
@@ -689,19 +710,28 @@ commentBoxes.appendChild(addCommentTitle);
 commentBoxes.appendChild(nameUser);
 commentBoxes.appendChild(textComment);
 commentBoxes.appendChild(sendBtn);
+comments.appendChild(close);
 comments.appendChild(furios);
-comments.appendChild(imagen);
 comments.appendChild(titleMovie);
 comments.appendChild(infoApi);
 comments.appendChild(oldComments);
-comments.appendChild(commentBoxes);
-
-function popup() {}
+comments.appendChild(commentOld1);
+comments.appendChild(commentBoxes); //------Events---
 
 popBtn.addEventListener('click', function (e) {
-  //e.preventDefault()
+  e.preventDefault();
   comments.style.visibility = 'visible';
 });
+close.addEventListener('click', function (e) {
+  e.preventDefault();
+  comments.style.visibility = 'hidden';
+}); //------Footer-------
+
+var footer = document.createElement('footer');
+var textFooter = document.createElement('p');
+textFooter.innerText = 'Created by microverse under CC license';
+footer.appendChild(textFooter);
+document.lastElementChild.appendChild(footer);
 })();
 
 /******/ })()
