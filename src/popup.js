@@ -95,7 +95,7 @@ async function showPop(id) {
 // ------Footer-------
 const footer = document.createElement('footer');
 const textFooter = document.createElement('p');
-textFooter.textContent = 'Created by microverse under CC license';
+textFooter.textContent = 'Created by John and Diego MTI license';
 footer.appendChild(textFooter);
 document.lastElementChild.appendChild(footer);
 
