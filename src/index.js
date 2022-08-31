@@ -47,6 +47,9 @@ class UI {
       starSpan.addEventListener('click', () => {
         Likes.addLikes(x.id);
         Likes.getLikes();
+        setTimeout(() => {
+          window.location.reload();
+        }, 500);
       });
 
       const titleDiv = document.createElement('div');

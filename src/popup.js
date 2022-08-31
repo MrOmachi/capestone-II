@@ -27,6 +27,7 @@ async function showPop(id) {
   infoApi.innerHTML = `${data.summary}`;
 
   const oldComments = document.createElement('h3');
+  oldComments.className = 'totalComment';
   oldComments.innerText = `Todat Comments: ${commentData.length}`;
   const commentOld1 = document.createElement('ul');
   console.log(commentData.error);
@@ -73,7 +74,7 @@ async function showPop(id) {
     nameUser = nameUser.value;
     textComment = textComment.value;
     Likes.postComments(id, nameUser, textComment);
-    Likes.getComments(id);
+    commentBoxes.reset();
   });
 
   comments.appendChild(close);
