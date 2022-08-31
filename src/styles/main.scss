@@ -16,7 +16,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  background-color: blue;
+  background-color: rgb(184, 184, 184);
   position: fixed;
   left: 0;
   right: 0;
@@ -72,7 +72,7 @@ body {
   display: flex;
   align-items: center;
   background-color: rgb(197, 197, 197);
-  position: absolute;
+  position: fixed;
   width: 400px;
   height: 700px;
   top: 50%;
@@ -82,7 +82,7 @@ body {
   padding: 0 30px 30px;
   color: #333;
   flex-direction: column;
-  visibility: visible;
+  visibility:hidden;
   justify-content: space-between;
 }
 .fast {
