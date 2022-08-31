@@ -3,10 +3,6 @@ import Close from './assets/close.png';
 import './index.js';
 import Likes from './index.js';
 
-//-----Coments------
-
-//-----Pop-up-------
-
 async function showPop(id) {
   const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
   const data = await res.json();
@@ -59,9 +55,9 @@ async function showPop(id) {
   commentBoxes.classList.add('cm');
   const addCommentTitle = document.createElement('h2');
   addCommentTitle.textContent = 'Add a comment';
-  const nameUser = document.createElement('input');
+  let nameUser = document.createElement('input');
   nameUser.setAttribute('placeholder', 'Your name');
-  const textComment = document.createElement('input');
+  let textComment = document.createElement('input');
   textComment.classList.add('insights');
   textComment.setAttribute('placeholder', 'Your insights');
   const sendBtn = document.createElement('button');
@@ -70,6 +66,14 @@ async function showPop(id) {
   commentBoxes.appendChild(nameUser);
   commentBoxes.appendChild(textComment);
   commentBoxes.appendChild(sendBtn);
+
+  sendBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    nameUser = nameUser.value;
+    textComment = textComment.value;
+    Likes.postComments(id, nameUser, textComment);
+    Likes.getComments(id);
+  });
 
   comments.appendChild(close);
   comments.appendChild(ImageGames);

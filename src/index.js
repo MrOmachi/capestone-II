@@ -27,11 +27,17 @@ class UI {
       const rateDiv = document.createElement('div');
       rateDiv.classList.add('cardStar');
       const starSpan = document.createElement('span');
+      starSpan.classList.add('starspan');
       starSpan.textContent = '⭐';
       const rateSpan = document.createElement('span');
       rateSpan.textContent = x.like && `${x.like}`;
       rateDiv.appendChild(starSpan);
       rateDiv.appendChild(rateSpan);
+
+      starSpan.addEventListener('click', () => {
+        Likes.addLikes(x.id);
+        Likes.getLikes();
+      });
 
       const titleDiv = document.createElement('div');
       titleDiv.classList.add('cardTitle');
@@ -60,7 +66,6 @@ class UI {
 UI.getMovies();
 
 // generate like
-const uniqueId = 'w6gyfRjKef7dpeJ8lwcd';
 class Likes {
   static getLikes = async () => {
     const res = await fetch(
@@ -113,9 +118,5 @@ class Likes {
     return comment;
   };
 }
-
-// Likes.postComments(1, 'john', 'yea');
-Likes.addLikes(17);
-Likes.getLikes();
 
 export default Likes;
