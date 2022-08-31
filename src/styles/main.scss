@@ -74,7 +74,7 @@ header img {
 .commentss {
   display: flex;
   align-items: center;
-  background-color: rgb(240, 185, 185);
+  background-color: rgba(223, 189, 129, 0.945);
   position: fixed;
   overflow-y: auto;
   width: 400px;
@@ -95,6 +95,7 @@ ul {
 }
 
 ul li {
+  color: rgb(94, 63, 0);
   margin: 10px;
 }
 
