@@ -1,35 +1,41 @@
-// body {
-//   margin: 5px;
-//   background:
-//     linear-gradient(rgba(200, 0, 100, 0.5), rgba(0, 0, 100, 0.5)),
-//     url(../assets/bj.jpeg);
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-attachment: fixed;
-//   background-size: cover;
-//   padding: 5px;
-//   color: white;
-// }
 * {
   margin: 0;
   padding: 0;
 }
 
+body {
+  margin: 5px;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(../assets/bj.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 5px;
+  color: white;
+}
+
 header {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
-  background-color: blue;
+  padding-left: 50px;
+  margin: auto;
+  gap: 40px;
+  background-color: #402e27;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
 }
 
+header img {
+  width: 80px;
+}
+
 .cardImg img {
   width: 300px;
   height: 300px;
+  border-radius: 20px;
 }
 
 .cardsContainer {
@@ -42,34 +48,33 @@ header {
 }
 
 .cards {
-  flex-wrap: wrap;
+  display: flex;
+  padding: 10px;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5e0f39;
 }
-
-// html {
-//   color: #555;
-//   font-family: Arial, Helvetica, sans-serif;
-//   font-size: 18px;
-//   font-weight: 400;
-// }
-
-// body {
-//   background-color: #fcfcfc;
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
 
 .commentsBtn {
   width: 100px;
   height: 35px;
   border-radius: 8px;
   margin: 20px 0;
+  text-align: center;
 }
+
+.sendBtn {
+  width: 100px;
+  height: 55px;
+  border-radius: 8px;
+  margin: 20px 30px;
+}
+
 .commentss {
   display: flex;
   align-items: center;
-  background-color: rgb(197, 197, 197);
+  background-color: rgb(240, 185, 185);
   position: fixed;
   overflow-y: auto;
   width: 400px;
@@ -78,7 +83,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  padding: 0 30px 30px;
+  padding: 0 30px 30px 30px;
   color: #333;
   flex-direction: column;
   visibility: visible;
@@ -100,11 +105,13 @@ ul li {
 .fast {
   width: 200px;
 }
+
 .closeBtn {
   width: 20px;
   margin-top: 120px;
   align-self: flex-end;
 }
+
 .cm {
   display: flex;
   flex-direction: column;
@@ -112,9 +119,11 @@ ul li {
   height: 200px;
   justify-content: space-around;
 }
+
 footer {
   margin-top: auto;
 }
+
 .insights {
   height: 50%;
 }

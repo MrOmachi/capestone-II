@@ -61,6 +61,7 @@ async function showPop(id) {
   textComment.classList.add('insights');
   textComment.setAttribute('placeholder', 'Your insights');
   const sendBtn = document.createElement('button');
+  sendBtn.className = 'sendBtn';
   sendBtn.textContent = 'Send Comment';
   commentBoxes.appendChild(addCommentTitle);
   commentBoxes.appendChild(nameUser);

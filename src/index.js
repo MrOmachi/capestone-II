@@ -1,12 +1,22 @@
 import './styles/main.scss';
 import showPop from './popup.js';
 import './popup.js';
+import movieImg from './assets/video-player.png';
 
 class UI {
   static getMovies = async () => {
     const res = await fetch('https://api.tvmaze.com/shows');
     const data = await res.json();
     const dataS = data.slice(0, 20);
+
+    const hearder = document.querySelector('header');
+    const headerImg = document.createElement('img');
+    headerImg.src = movieImg;
+    const h1 = document.createElement('h1');
+    h1.textContent = 'Movies';
+    const h3 = document.createElement('h3');
+    h3.textContent = `Total Number of movies: ${dataS.length}`;
+    hearder.append(headerImg, h1, h3);
 
     const likedata = await Likes.getLikes();
     dataS.forEach((x) => {
@@ -47,6 +57,7 @@ class UI {
       commentsDiv.classList.add('comments');
       const commentsBtn = document.createElement('button');
       commentsBtn.textContent = 'Comments';
+      commentsBtn.className = 'commentsBtn';
       commentsDiv.appendChild(commentsBtn);
 
       div.appendChild(imgDiv);
