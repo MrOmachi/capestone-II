@@ -71,8 +71,9 @@ header {
   align-items: center;
   background-color: rgb(197, 197, 197);
   position: fixed;
+  overflow-y: auto;
   width: 400px;
-  height: 700px;
+  height: 100vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -82,6 +83,14 @@ header {
   flex-direction: column;
   visibility: visible;
   justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 10px;
 }
 
 .hide {

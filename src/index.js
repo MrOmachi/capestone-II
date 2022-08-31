@@ -1,12 +1,19 @@
 import './styles/main.scss';
 import showPop from './popup.js';
+import './popup.js';
 
 class UI {
   static getMovies = async () => {
     const res = await fetch('https://api.tvmaze.com/shows');
     const data = await res.json();
+    const dataS = data.slice(0, 20);
 
-    data.forEach((x) => {
+    const likedata = await Likes.getLikes();
+    dataS.forEach((x) => {
+      likedata.forEach((y) => {
+        y.item_id === x.id ? (x.like = y.likes) : x;
+      });
+
       const cardsContainer = document.querySelector('.cardsContainer');
       let div = document.createElement('div');
       div.className = 'cards';
@@ -22,7 +29,7 @@ class UI {
       const starSpan = document.createElement('span');
       starSpan.textContent = '⭐';
       const rateSpan = document.createElement('span');
-      rateSpan.textContent = `${x.id}`;
+      rateSpan.textContent = x.like && `${x.like}`;
       rateDiv.appendChild(starSpan);
       rateDiv.appendChild(rateSpan);
 
@@ -44,7 +51,7 @@ class UI {
 
       commentsBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        showPop();
+        showPop(x.id);
       });
     });
   };
@@ -95,19 +102,20 @@ class Likes {
       }
     );
     const post = await res.text();
-    console.log(post);
+    return post;
   };
 
-  static getComments = async () => {
+  static getComments = async (id) => {
     const res = await fetch(
-      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/comments'
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/comments?item_id=${id}`
     );
     const comment = await res.json();
+    return comment;
   };
 }
-Likes.postComments(2, 'john', 'yea');
-Likes.getComments();
+
+// Likes.postComments(1, 'john', 'yea');
 Likes.addLikes(17);
 Likes.getLikes();
 
-import './popup.js';
+export default Likes;
