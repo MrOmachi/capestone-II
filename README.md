@@ -48,7 +48,7 @@ Have NodeJS installed and follow the next steps
 👤 _Diego Hernández_
 
 - GitHub: [@diehoh40](https://github.com/diegoh40)
-- Twitter: [@Diegoart80](https://twitter.com/twitterhandle)
+- Twitter: [@Diegoart80](https://twitter.com/Diegoart80)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/diego-hernández-25280a100/)
 
 ## 🤝 Contributing
