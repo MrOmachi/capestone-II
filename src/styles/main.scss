@@ -5,7 +5,8 @@
 
 body {
   margin: 5px;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url(../assets/bj.jpeg);
   background-repeat: no-repeat;
   background-position: center;
@@ -88,9 +89,9 @@ header img {
   flex-direction: column;
   visibility: visible;
   justify-content: space-between;
-  
-  p{
-    text-align: justify; 
+
+  p {
+    text-align: justify;
     padding: 10px 0;
   }
 }
@@ -126,7 +127,7 @@ ul li {
   justify-content: space-around;
 }
 
-footer {  
+footer {
   font-size: 20px;
   height: 5%;
   display: flex;
@@ -135,10 +136,9 @@ footer {
   background-color: #402e27;
   position: fixed;
   left: 0;
-  right: 0;  
+  right: 0;
   bottom: 0;
   color: #c9c9c9;
- 
 }
 
 .insights {
@@ -148,4 +148,3 @@ footer {
 .starspan:hover {
   cursor: pointer;
 }
-

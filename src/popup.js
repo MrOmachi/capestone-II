@@ -1,6 +1,5 @@
 import './styles/main.scss';
 import Close from './assets/close.png';
-import './index.js';
 import Likes from './index.js';
 
 async function showPop(id) {
@@ -30,7 +29,6 @@ async function showPop(id) {
   oldComments.className = 'totalComment';
   oldComments.innerText = `Todat Comments: ${commentData.length}`;
   const commentOld1 = document.createElement('ul');
-  console.log(commentData.error);
   if (!commentData.error) {
     commentData.forEach((x) => {
       const listComments = document.createElement('li');
@@ -46,7 +44,7 @@ async function showPop(id) {
     const listComments = document.createElement('li');
     const listComments2 = document.createElement('li');
     const hr = document.createElement('hr');
-    listComments2.textContent = ` No comment on this movie`;
+    listComments2.textContent = ' No comment on this movie';
     commentOld1.appendChild(listComments);
     commentOld1.appendChild(listComments2);
     commentOld1.appendChild(hr);

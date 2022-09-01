@@ -45,6 +45,7 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
+    "@jest/globals": "^29.0.1",
     "gh-pages": "^4.0.0"
   }
 }
