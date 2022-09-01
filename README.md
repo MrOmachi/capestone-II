@@ -16,6 +16,10 @@
 
 :smile: not yet [Live Demo Link](https://livedemo.com)
 
+## Video Link
+
+[Short video about project implementation](https://drive.google.com/file/d/12FYCoyaTPXs1rXcxH-cd3GttsqFJnWsO/view?usp=sharing)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
