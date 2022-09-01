@@ -1,6 +1,6 @@
 import './styles/main.scss';
 import Close from './assets/close.png';
-import Likes from './index.js';
+import Likes from './modules/likeComment.js';
 
 async function showPop(id) {
   const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
