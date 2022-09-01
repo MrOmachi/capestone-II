@@ -4,6 +4,10 @@ const comments = [
   { comment: 'ammar', creation_date: '2022-02-01', username: 'i like it' },
 ];
 
+const totalNumMovies = (dataS) => {
+  return dataS.length;
+};
+
 const totalMovies = [
   {
     id: 1,
@@ -11,4 +15,4 @@ const totalMovies = [
   },
 ];
 
-export { comments, totalMovies };
+export { comments, totalMovies, totalNumMovies };

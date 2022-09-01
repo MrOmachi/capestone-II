@@ -4,6 +4,17 @@ import movieImg from './assets/video-player.png';
 import Likes from './modules/likeComment';
 
 class UI {
+  static Movies = async () => {
+    const res = await fetch('https://api.tvmaze.com/shows');
+    const data = await res.json();
+    const dataS = data.slice(0, 20);
+    this.totalNumMovies(dataS);
+  };
+
+  static totalNumMovies = (dataS) => {
+    return dataS.length;
+  };
+
   static getMovies = async () => {
     const res = await fetch('https://api.tvmaze.com/shows');
     const data = await res.json();
@@ -76,6 +87,5 @@ class UI {
     });
   };
 }
-
 UI.getMovies();
 export default UI;
