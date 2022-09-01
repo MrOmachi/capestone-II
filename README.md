@@ -65,7 +65,7 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## Acknowledgments.
 
 [![TVMAZE|API](https://static.tvmaze.com/images/tvm-header-logo.png)](https://static.tvmaze.com/apidoc/)
 
