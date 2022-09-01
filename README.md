@@ -2,7 +2,7 @@
 
 # tvmaze :Movies display:
 
-![tvmaze-logo](./src/assets/tvm_api_350x70.png)
+![tvmaze-logo](https://static.tvmaze.com/images/tvm-header-logo.png)
 
 > This JavaScript capstone project is built on the [TVMAZE API](https://static.tvmaze.com/apidoc/), an external API. The cards display the movies information that was retrieved from the API. The user has the option to like and comment on the movies cards.
 
@@ -63,7 +63,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-[![TVMAZE|API](./src/assets/tvm_api_350x70.png)](https://static.tvmaze.com/apidoc/)
+[![TVMAZE|API](https://static.tvmaze.com/images/tvm-header-logo.png)](https://static.tvmaze.com/apidoc/)
 
 - [Microverse](https://microverse.org)
 - Inspiration
