@@ -2,6 +2,14 @@ import './styles/main.scss';
 import Close from './assets/close.png';
 import Likes from './modules/likeComment.js';
 
+const commentD = async (id) => {
+  const commentDataS = await Likes.getComments(id);
+  totalComment(commentDataS);
+};
+
+const totalComment = (commentsNum) => {
+  return commentsNum.length;
+};
 async function showPop(id) {
   const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
   const data = await res.json();
@@ -97,4 +105,4 @@ textFooter.textContent = 'Created by John and Diego MTI license';
 footer.appendChild(textFooter);
 document.lastElementChild.appendChild(footer);
 
-export default showPop;
+export { showPop, commentD };

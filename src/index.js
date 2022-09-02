@@ -1,5 +1,5 @@
 import './styles/main.scss';
-import showPop from './popup.js';
+import { showPop } from './popup.js';
 import movieImg from './assets/video-player.png';
 import Likes from './modules/likeComment';
 

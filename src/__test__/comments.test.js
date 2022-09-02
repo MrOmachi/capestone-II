@@ -1,13 +1,34 @@
 import { describe, expect, test } from '@jest/globals';
-import { comments, totalMovies, totalNumMovies } from './__mock__/fake_api.js';
+import { totalComment, totalNumMovies } from './__mock__/fake_api.js';
 // import UI from '../index.js';
 
 describe('Total Number of Comments', () => {
   test(' Test1', () => {
-    expect(comments.length).toBe(3);
+    const comments = [
+      {
+        username: 'clinton',
+        creation_date: '2022-02-01',
+        comment: 'Nice movie',
+      },
+      { comment: 'ahmed', creation_date: '2022-02-01', username: 'very scary' },
+
+      { comment: 'ammar', creation_date: '2022-02-01', username: 'i like it' },
+    ];
+
+    const commentsTotal = totalComment(comments);
+
+    expect(commentsTotal).toBe(3);
   });
-  test('Test2', () => {
-    expect(typeof comments[0]).toEqual('object');
+  test(' Test1', () => {
+    const comments2 = [
+      {
+        username: 'clinton',
+        creation_date: '2022-02-01',
+        comment: 'Nice movie',
+      },
+    ];
+    const commentsTotal2 = totalComment(comments2);
+    expect(commentsTotal2).toBe(1);
   });
 });
 
