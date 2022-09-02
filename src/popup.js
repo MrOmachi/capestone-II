@@ -2,14 +2,13 @@ import './styles/main.scss';
 import Close from './assets/close.png';
 import Likes from './modules/likeComment.js';
 
+const totalComment = (commentsNum) => commentsNum.length;
+
 const commentD = async (id) => {
   const commentDataS = await Likes.getComments(id);
   totalComment(commentDataS);
 };
 
-const totalComment = (commentsNum) => {
-  return commentsNum.length;
-};
 async function showPop(id) {
   const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
   const data = await res.json();

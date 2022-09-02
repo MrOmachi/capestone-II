@@ -1,7 +1,7 @@
 import './styles/main.scss';
 import { showPop } from './popup.js';
 import movieImg from './assets/video-player.png';
-import Likes from './modules/likeComment';
+import Likes from './modules/likeComment.js';
 
 class UI {
   static Movies = async () => {
@@ -11,9 +11,7 @@ class UI {
     this.totalNumMovies(dataS);
   };
 
-  static totalNumMovies = (dataS) => {
-    return dataS.length;
-  };
+  static totalNumMovies = (dataS) => dataS.length;
 
   static getMovies = async () => {
     const res = await fetch('https://api.tvmaze.com/shows');

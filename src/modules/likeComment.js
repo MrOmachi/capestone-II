@@ -1,7 +1,7 @@
 class Likes {
   static getLikes = async () => {
     const res = await fetch(
-      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/likes'
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/likes',
     );
     const data = await res.json();
     return data;
@@ -18,7 +18,7 @@ class Likes {
         body: JSON.stringify({
           item_id: id,
         }),
-      }
+      },
     );
     const post = await response.text();
     return post;
@@ -37,7 +37,7 @@ class Likes {
           username: name,
           comment,
         }),
-      }
+      },
     );
     const post = await res.text();
     return post;
@@ -45,7 +45,7 @@ class Likes {
 
   static getComments = async (id) => {
     const res = await fetch(
-      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/comments?item_id=${id}`
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/w6gyfRjKef7dpeJ8lwcd/comments?item_id=${id}`,
     );
     const comment = await res.json();
     return comment;
