@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 5px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(../assets/bj.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 5px;
+  color: white;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  margin: auto;
+  gap: 40px;
+  background-color: #402e27;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+header img {
+  width: 80px;
+}
+
+.cardImg img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.cardsContainer {
+  width: 90%;
+  margin: 85px auto;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cards {
+  display: flex;
+  padding: 10px;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5e0f39;
+}
+
+.commentsBtn {
+  width: 100px;
+  height: 35px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.sendBtn {
+  width: 100px;
+  height: 55px;
+  border-radius: 8px;
+  margin: 20px 30px;
+}
+
+.commentss {
+  display: flex;
+  align-items: center;
+  background-color: rgba(223, 189, 129, 0.945);
+  position: fixed;
+  overflow-y: auto;
+  width: 400px;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 30px 30px 30px;
+  color: #333;
+  flex-direction: column;
+  visibility: visible;
+  justify-content: space-between;
+
+  p {
+    text-align: justify;
+    padding: 10px 0;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  color: rgb(248, 248, 248);
+  margin: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.fast {
+  width: 200px;
+}
+
+.closeBtn {
+  width: 20px;
+  margin-top: 120px;
+  align-self: flex-end;
+}
+
+.cm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 200px;
+  justify-content: space-around;
+}
+
+footer {
+  font-size: 20px;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #402e27;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #c9c9c9;
+}
+
+.insights {
+  height: 50%;
+}
+
+.starspan:hover {
+  cursor: pointer;
+}
