@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-:smile: not yet [Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://creative-snickerdoodle-94ec3b.netlify.app/)
 
 ## Video Link
 
